@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    # Security updates are enabled by default; they'll be opened immediately when found.
+    # You can change `interval` to "daily" if you want faster updates.
+    allow:
+      - dependency-type: "all"
+    # Optionally suppress noisy major-version bumps; Dependabot will still open them unless you add an `ignore` entry.
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
